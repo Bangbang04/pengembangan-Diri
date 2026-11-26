@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berawal dari Layar Film Hacker hingga Mengenal Kode dan Jaringan — Bangbang Ramadhan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            paper: '#FAF9F6',
+            ink: '#1C1917',
+            muted: '#57534E',
+            border: '#E7E5E4',
+            accent: '#B45309',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1C1917;
+    }
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #B45309;
+      z-index: 50;
+      transition: width 0.1s ease-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-amber-200 selection:text-stone-900">
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar" class="reading-progress" style="width: 0%;"></div>
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-stone-200/80">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-stone-900 text-stone-50 flex items-center justify-center font-serif font-semibold text-base">
+          B
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-stone-900 leading-none">Bangbang Ramadhan</p>
+          <p class="text-xs text-stone-500 mt-1">Catatan Bangbang · Ruang Baca</p>
+        </div>
+      </div>
+      <a href="#profil-penulis" class="text-xs font-medium text-stone-600 hover:text-stone-900 transition flex items-center gap-1">
+        Tentang Penulis <span>→</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Article Container -->
+  <main class="max-w-3xl mx-auto px-6 pt-12 pb-24">
+    
+    <!-- Breadcrumb / Category -->
+    <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-700 mb-4">
+      <span>Ruang Baca</span>
+      <span>·</span>
+      <span>Stories</span>
+      <span>·</span>
+      <span>Catatan Belajar</span>
+    </div>
+
+    <!-- Article Title & Subtitle -->
+    <h1 class="font-serif text-3xl sm:text-5xl font-semibold text-stone-900 tracking-tight leading-[1.15] mb-6">
+      Berawal dari Film Hacker hingga Mengenal Kode dan Jaringan di Bangku SMK
+    </h1>
+
+    <p class="text-lg sm:text-xl text-stone-600 leading-relaxed mb-8">
+      Ketertarikan pada dunia teknologi sering kali dimulai dari hal sederhana. Bagi saya, semua berawal dari rasa kagum melihat adegan terminal hitam di layar film, lalu membawanya ke perjalanan nyata di SMK PGRI 35 Solokan Jeruk.
+    </p>
+
+    <!-- Meta Information Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-stone-200 text-sm text-stone-600 mb-10">
+      <div class="flex items-center gap-6">
+        <div>
+          <span class="block text-xs text-stone-400">Ditulis oleh</span>
+          <span class="font-medium text-stone-900">Bangbang Ramadhan</span>
+        </div>
+        <div>
+          <span class="block text-xs text-stone-400">Tanggal</span>
+          <span class="font-medium text-stone-900">26 November 2026</span>
+        </div>
+      </div>
+      <div class="font-mono text-xs bg-stone-200/60 px-3 py-1.5 rounded-full text-stone-700">
+        ± 4 menit baca
+      </div>
+    </div>
+
+    <!-- Papan Nama / Highlight Card -->
+    <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm mb-10">
+      <div class="flex items-center justify-between text-xs font-mono text-stone-400 mb-4">
+        <span>Papan Nama · No. 01</span>
+        <div class="flex gap-1.5">
+          <span class="w-2.5 h-2.5 rounded-full border border-stone-300"></span>
+          <span class="w-2.5 h-2.5 rounded-full border border-stone-300"></span>
+        </div>
+      </div>
+      <p class="font-serif text-xl sm:text-2xl text-stone-800 leading-snug">
+        <strong class="font-semibold text-stone-900">Dari imajinasi layar kaca ke praktik nyata.</strong> Rasa penasaran membuat saya sadar bahwa di balik aksi keren di film, ada logika pemrograman dan infrastruktur jaringan yang harus dipelajari tahap demi tahap.
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="bg-stone-100/80 border border-stone-200/80 rounded-xl p-6 mb-14">
+      <p class="text-xs font-mono uppercase tracking-wider text-stone-500 mb-4">Di cerita ini</p>
+      <ol class="grid sm:grid-cols-2 gap-3 text-sm">
+        <li>
+          <a href="#bagian-01" class="group flex items-center gap-3 text-stone-700 hover:text-amber-700 transition">
+            <span class="font-mono text-xs text-stone-400 group-hover:text-amber-700">01</span>
+            <span class="font-medium">Terpukau Adegan Film Hacker</span>
+          </a>
+        </li>
+        <li>
+          <a href="#bagian-02" class="group flex items-center gap-3 text-stone-700 hover:text-amber-700 transition">
+            <span class="font-mono text-xs text-stone-400 group-hover:text-amber-700">02</span>
+            <span class="font-medium">Memilih Jurusan RPL di SMK</span>
+          </a>
+        </li>
+        <li>
+          <a href="#bagian-03" class="group flex items-center gap-3 text-stone-700 hover:text-amber-700 transition">
+            <span class="font-mono text-xs text-stone-400 group-hover:text-amber-700">03</span>
+            <span class="font-medium">Menyelami Dunia Jaringan</span>
+          </a>
+        </li>
+        <li>
+          <a href="#bagian-04" class="group flex items-center gap-3 text-stone-700 hover:text-amber-700 transition">
+            <span class="font-mono text-xs text-stone-400 group-hover:text-amber-700">04</span>
+            <span class="font-medium">Fondasi yang Terus Bertumbuh</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Article Body -->
+    <article class="space-y-14 text-stone-800 leading-[1.8] text-[17px]">
+
+      <!-- Section 01 -->
+      <section id="bagian-01" class="scroll-mt-24 space-y-5">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-sm font-medium text-amber-700">01</span>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-stone-900">
+          Terpukau Adegan Film Hacker
+        </h2>
+        <p>
+          Semua bermula dari layar kaca. Seperti banyak anak muda lain yang mulai melirik dunia komputer, ketertarikan awal saya muncul saat menonton film-film bertema <em>hacker</em>. Melihat karakter di dalam film mengetik baris perintah dengan cepat di layar terminal hitam, menembus sistem, dan mengendalikan komputer dari jarak jauh terasa begitu memukau.
+        </p>
+        <p>
+          Waktu itu tentu saja saya belum mengerti apa yang sebenarnya tertulis di layar tersebut. Namun satu pertanyaan terus menempel di kepala: <em>"Bagaimana cara komputer memahami perintah-perintah itu, dan bagaimana perangkat satu dengan lainnya bisa saling terhubung?"</em> Rasa penasaran itulah yang akhirnya mendorong saya memilih jalur pendidikan kejuruan di bidang teknologi.
+        </p>
+      </section>
+
+      <!-- Section 02 -->
+      <section id="bagian-02" class="scroll-mt-24 space-y-5">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-sm font-medium text-amber-700">02</span>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-stone-900">
+          Memilih Jurusan RPL di SMK PGRI 35 Solokan Jeruk
+        </h2>
+        <p>
+          Berbekal rasa ingin tahu itu, saya memutuskan masuk ke <strong>SMK PGRI 35 Solokan Jeruk</strong> dan mengambil jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong>. Di sinilah gambaran glamor ala film perlahan berganti dengan realitas teknis yang sebenarnya.
+        </p>
+        <p>
+          Di kelas RPL, saya mulai mengenal bagaimana sebuah aplikasi dibangun dari nol—mulai dari memahami alur logika algoritma, struktur basis data, hingga menuliskan baris kode pemrograman. Saya sadar bahwa sebelum seseorang bisa mengamankan atau menguji sebuah sistem, ia harus terlebih dahulu memahami bagaimana sistem tersebut dirancang dan ditulis oleh seorang pengembang.
+        </p>
+      </section>
+
+      <!-- Section 03 -->
+      <section id="bagian-03" class="scroll-mt-24 space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-sm font-medium text-amber-700">03</span>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-stone-900">
+          Menyelami Dunia Jaringan Komputer
+        </h2>
+        <p>
+          Meskipun berada di jurusan Rekayasa Perangkat Lunak, rasa penasaran saya tidak berhenti di penulisan kode aplikasi saja. Saya juga tertarik mempelajari dunia <strong>jaringan komputer</strong>. Bagi saya, perangkat lunak dan jaringan adalah dua sisi mata uang yang tidak bisa dipisahkan.
+        </p>
+        <p>
+          Dari belajar jaringan, saya mulai memahami bagaimana paket data dikirim, bagaimana alamat IP bekerja, konfigurasi router, hingga cara menghubungkan puluhan perangkat agar bisa berkomunikasi dengan stabil. Pengetahuan lintas bidang antara <em>software</em> dan <em>networking</em> ini memberi sudut pandang yang jauh lebih utuh saat menghadapi persoalan teknis di lapangan.
+        </p>
+
+        <!-- Progression Card (Mirip Diagram Alur pada Referensi) -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-7 my-8 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-6 border-b border-stone-100">
+            <span class="text-xs font-mono uppercase tracking-wider text-stone-500">Jejak Awal Perjalanan</span>
+            <span class="text-xs font-mono font-medium text-amber-700">Rasa Penasaran → Fondasi Teknis</span>
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-4">
+            <!-- Step 1 -->
+            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-4">
+              <span class="font-mono text-[11px] font-semibold text-amber-700 block mb-1">FASE 01</span>
+              <h3 class="font-semibold text-stone-900 text-base mb-1.5">Pemicu Minat</h3>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Terinspirasi dari film bertema hacker dan penasaran dengan cara kerja di balik layar komputer.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-4">
+              <span class="font-mono text-[11px] font-semibold text-amber-700 block mb-1">FASE 02</span>
+              <h3 class="font-semibold text-stone-900 text-base mb-1.5">RPL · SMK PGRI 35</h3>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Mempelajari logika pemrograman, perancangan aplikasi, dan dasar rekayasa perangkat lunak.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-4">
+              <span class="font-mono text-[11px] font-semibold text-amber-700 block mb-1">FASE 03</span>
+              <h3 class="font-semibold text-stone-900 text-base mb-1.5">Eksplorasi Jaringan</h3>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Mendalami infrastruktur jaringan, pengalamatan IP, router, dan konektivitas antarperangkat.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-stone-100 flex flex-wrap items-center gap-2 text-xs font-mono text-stone-500">
+            <span>Fokus Awal:</span>
+            <span class="px-2.5 py-1 bg-stone-100 rounded text-stone-700">Algoritma & Kode</span>
+            <span class="px-2.5 py-1 bg-stone-100 rounded text-stone-700">Basis Data</span>
+            <span class="px-2.5 py-1 bg-stone-100 rounded text-stone-700">Networking & MikroTik</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 04 -->
+      <section id="bagian-04" class="scroll-mt-24 space-y-5">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-sm font-medium text-amber-700">04</span>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-stone-900">
+          Fondasi yang Terus Bertumbuh
+        </h2>
+
+        <blockquote class="border-l-2 border-amber-700 pl-5 py-1 my-6 italic font-serif text-xl text-stone-800">
+          "Ketertarikan dari tontonan hanyalah pintu masuk; ketekunan mempelajari dasar kode dan jaringanlah yang mengubah rasa penasaran menjadi keahlian nyata."
+          <footer class="not-italic font-sans text-xs font-medium text-stone-500 mt-2">
+            — Bangbang Ramadhan
+          </footer>
+        </blockquote>
+
+        <p>
+          Melihat kembali langkah-langkah awal di SMK PGRI 35 Solokan Jeruk, saya bersyukur rasa penasaran masa remaja itu diarahkan ke tempat yang tepat. Bekal pemrograman dari jurusan RPL dan pemahaman jaringan yang saya pelajari saat itu terus menjadi fondasi berharga—baik ketika menangani infrastruktur di lapangan maupun saat melanjutkan studi S1 Teknik Informatika di Universitas Teknologi Bandung.
+        </p>
+        <p>
+          Perjalanan ini masih terus berlanjut. Dari sekadar penonton yang kagum pada baris perintah di layar film, kini saya terus belajar merancang dan membangun sistem secara nyata, satu langkah demi satu langkah.
+        </p>
+      </section>
+
+    </article>
+
+    <!-- End Marker -->
+    <div class="mt-16 pt-8 border-t border-stone-200 text-center">
+      <span class="font-mono text-xs uppercase tracking-widest text-stone-400">Tamat · Ruang Baca</span>
+    </div>
+
+    <!-- Author Bio Card -->
+    <section id="profil-penulis" class="mt-12 bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 shadow-sm">
+      <div class="w-16 h-16 rounded-2xl bg-stone-900 text-stone-50 flex items-center justify-center font-serif text-2xl font-semibold shrink-0">
+        BR
+      </div>
+      <div class="flex-1">
+        <span class="text-xs font-mono uppercase tracking-wider text-amber-700">Ditulis oleh</span>
+        <h3 class="font-serif text-xl font-semibold text-stone-900 mt-0.5">Bangbang Ramadhan</h3>
+        <p class="text-sm text-stone-600 leading-relaxed mt-2">
+          Alumni RPL SMK PGRI 35 Solokan Jeruk dan mahasiswa S1 Teknik Informatika di Universitas Teknologi Bandung. Memiliki minat pada rekayasa perangkat lunak, jaringan komputer, dan manajemen proyek TI.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-4 text-xs font-medium">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-stone-900 hover:text-amber-700 transition">
+            GitHub Profile →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 py-8 text-center text-xs text-stone-500">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>© 2026 Bangbang Ramadhan · Tugas Kuliah Pengembangan Diri</p>
+      <p class="font-mono text-stone-400">Universitas Teknologi Bandung</p>
+    </div>
+  </footer>
+
+  <!-- Script untuk Reading Progress Bar -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      document.getElementById('progress-bar').style.width = progress + '%';
+    });
+  </script>
+</body>
+</html>
