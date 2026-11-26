@@ -1,2 +1,4 @@
 Dibangun dengan HTML + CSS.
-Link blog : https://bangbang04.github.io/pengembangan-Diri/
+<p>
+  Link blog : https://bangbang04.github.io/pengembangan-Diri/
+</p>
